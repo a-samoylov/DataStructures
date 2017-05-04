@@ -7,7 +7,7 @@ using namespace std;
 
 class IContainer {
 public:
-	virtual int size() const; // возвращает размер контейнера
-	virtual bool isEmpty() const; // проверяет пустой ли контейнер
-	virtual string toString() const; // строка со всеми элементами
+	virtual int size() const = 0; // возвращает размер контейнера
+	virtual bool isEmpty() const = 0; // проверяет пустой ли контейнер
+	virtual string toString() const = 0; // строка со всеми элементами
 };

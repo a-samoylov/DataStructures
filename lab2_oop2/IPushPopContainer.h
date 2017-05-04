@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class IPushPopContainer : public IContainer {
+class IPushPopContainer : public virtual IContainer {
 	bool push(int value); // добавить элемент
 	int pop(); // забрать элемент
 	int peek() const; // узнать элемент

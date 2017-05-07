@@ -35,10 +35,25 @@ bool Stack::isEmpty() const {
 }
 
 char* Stack::toString() const {
-	//TODO
+	char *description = new char[256]{ NULL };
+	MyStruct *temp = head;
 
+	strcat(description, "Stack\nHead->");
+	for (int i = 0; i < _size; i++) {
+		if (i != 0) {
+			strcat(description, ", ");
+		}
 
-	return "";
+		char *val = new char[256]{ NULL };
+		itoa(temp->value, val, 10);
+		temp = temp->next;
+		strcat(description, val);
+		delete val;
+
+	}
+	strcat(description, "<-Tail");
+
+	return description;
 }
 
 bool Stack::push(int value) {

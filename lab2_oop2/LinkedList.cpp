@@ -72,7 +72,7 @@ int LinkedList::pop() {
 		throw "Error: empty";
 
 	int temp = this->head->value;
-	this->head = this->head->next;
+	this->head = this->head->prev;
 	_size--;
 	return temp;
 };

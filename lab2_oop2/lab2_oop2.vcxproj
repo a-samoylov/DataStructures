@@ -150,6 +150,7 @@
     <ClInclude Include="IIndexedContainer.h" />
     <ClInclude Include="IInsertableContainer.h" />
     <ClInclude Include="IPushPopContainer.h" />
+    <ClInclude Include="LinkedDeque.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="MyStruct.h" />
     <ClInclude Include="Queue.h" />
@@ -160,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lab2_oop2.cpp" />
+    <ClCompile Include="LinkedDeque.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="MyStruct.cpp" />
     <ClCompile Include="Queue.cpp" />

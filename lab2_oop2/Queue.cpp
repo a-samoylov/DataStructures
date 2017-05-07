@@ -36,9 +36,25 @@ bool Queue::isEmpty() const {
 }
 
 char* Queue::toString() const {
-	//TODO
+	char *description = new char[256]{ NULL };
+	MyStruct *temp = head;
 
-	return "";
+	strcat(description, "Queue\nHead->");
+	for (int i = 0; i < _size; i++) {
+		if (i != 0) {
+			strcat(description, ", ");
+		}
+
+		char *val = new char[256]{ NULL };
+		itoa(temp->value, val, 10);
+		temp = temp->prev;
+		strcat(description, val);
+		delete val;
+
+	}
+	strcat(description, "<-Tail");
+
+	return description;
 }
 
 bool Queue::push(int value) {

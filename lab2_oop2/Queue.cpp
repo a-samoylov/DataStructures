@@ -35,18 +35,10 @@ bool Queue::isEmpty() const {
 	return _size == 0;
 }
 
-string Queue::toString() const {
+char* Queue::toString() const {
 	//TODO
-	string temp_s = "";
-	MyStruct *prev = this->head;
-	for (int i = 0; i < this->_size; i++)
-	{
-		cout << prev->value << "\n" << endl;
-		//temp_s += strcat (next->value, "\n");
-		prev = prev->prev;
-	}
 
-	return temp_s;
+	return "";
 }
 
 bool Queue::push(int value) {

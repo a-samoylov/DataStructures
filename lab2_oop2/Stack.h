@@ -1,7 +1,6 @@
 #pragma once
 
 #include "stdafx.h"
-#include <iostream>
 #include "MyStruct.h"
 #include "IPushPopContainer.h"
 
@@ -15,7 +14,7 @@ public:
 
 	int size() const;
 	bool isEmpty() const;
-	string toString() const;
+	char* toString() const;
 
 	bool push(int value); // добавить элемент
 	int pop(); // забрать элемент

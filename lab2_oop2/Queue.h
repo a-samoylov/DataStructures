@@ -11,7 +11,7 @@ private:
 public:
 	int size() const;
 	bool isEmpty() const;
-	string toString() const;
+	char* toString() const;
 
 	int pop();
 	int peek() const;

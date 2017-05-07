@@ -34,18 +34,11 @@ bool Stack::isEmpty() const {
 	return _size == 0;
 }
 
-string Stack::toString() const {
+char* Stack::toString() const {
 	//TODO
-	string temp_s = "";
-	MyStruct *next = this->head;
-	for (int i = 0; i < this->_size; i++)
-	{
-		cout << next->value << "\n" << endl;
-		//temp_s += strcat (next->value, "\n");
-		next = next->next;
-	}
 
-	return temp_s;
+
+	return "";
 }
 
 bool Stack::push(int value) {
@@ -75,10 +68,8 @@ int Stack::pop() {
 		throw "Error: stck empty";
 
 	int temp = this->head->value;
-	//MyStruct *m = this->head;
 	this->head = this->head->next;
 	_size--;
-	//delete m;
 	return temp;
 };
 

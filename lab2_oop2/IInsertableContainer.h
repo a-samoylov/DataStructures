@@ -5,7 +5,8 @@
 #include "IIndexedContainer.h"
 #include "IDeque.h"
 
-class IInsertableContainer : public IIndexedContainer, IDeque {
-	bool insertAt(int index, int value); // вставить элемент со сдвигом
-	int removeAt(int index); // убрать элемент со сдвигом
+class IInsertableContainer : public virtual IIndexedContainer, public virtual IDeque {
+public:
+	virtual bool insertAt(int, int) = 0; // вставить элемент со сдвигом
+	virtual int removeAt(int) = 0; // убрать элемент со сдвигом
 };

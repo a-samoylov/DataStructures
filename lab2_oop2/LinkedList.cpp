@@ -185,3 +185,87 @@ int LinkedList::removeAt(int index) {
 
 	return 0;
 }
+
+bool LinkedList::pushFront(int value) {
+	try
+	{
+		MyStruct *pstr = new MyStruct(value);
+
+		if (isEmpty()) {
+			this->head = pstr;
+			this->tail = pstr;
+		}
+		else {
+			pstr->prev = this->head;
+
+			this->head->next = pstr;
+			this->head = pstr;
+		}
+		_size++;
+	}
+	catch (const std::exception&)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool LinkedList::pushBack(int value) {
+	try
+	{
+		MyStruct *pstr = new MyStruct(value);
+
+		if (isEmpty()) {
+			this->head = pstr;
+			this->tail = pstr;
+		}
+		else {
+			pstr->next = this->tail;
+
+			this->tail->prev = pstr;
+			this->tail = pstr;
+		}
+		_size++;
+	}
+	catch (const std::exception&)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+int LinkedList::popFront() {
+	if (this->isEmpty())
+		throw "Error: empty";
+
+	int temp = this->head->value;
+
+	this->head = this->head->prev;
+	_size--;
+	return temp;
+};
+
+int LinkedList::popBack() {
+	if (this->isEmpty())
+		throw "Error: empty";
+
+	int temp = this->tail->value;
+
+	this->tail = this->tail->next;
+	_size--;
+	return temp;
+};
+
+int LinkedList::peekFront() const {
+	if (this->isEmpty())
+		throw "Error: empty";
+	return head->value;
+}
+
+int LinkedList::peekBack() const {
+	if (this->isEmpty())
+		throw "Error: empty";
+	return tail->value;
+}

@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Stack : public virtual IPushPopContainer
+class Stack : public IPushPopContainer
 {
 public:
 	Stack();

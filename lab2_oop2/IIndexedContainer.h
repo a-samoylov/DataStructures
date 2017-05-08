@@ -6,7 +6,8 @@
 
 using namespace std;
 
-class IIndexedContainer : public IContainer {
-	int get(int index) const; // узнать элемент по индексу index
-	void set(int index, int value); // задать значение элементу
+class IIndexedContainer : public virtual IContainer {
+public:
+	virtual int get(int) const = 0; // узнать элемент по индексу index
+	virtual void set(int, int) = 0; // задать значение элементу
 };

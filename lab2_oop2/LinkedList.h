@@ -22,6 +22,13 @@ public:
 
 	int get(int) const; // узнать элемент по индексу index
 	void set(int, int); // задать значение элементу
+
+	bool pushFront(int);
+	bool pushBack(int);
+	int popFront();
+	int popBack();
+	int peekFront() const;
+	int peekBack() const;
 private:
 	MyStruct *head;
 	MyStruct *tail;
